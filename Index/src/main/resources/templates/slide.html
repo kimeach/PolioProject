@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org" 
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+	<div th:fragment="Slide">
+		<div id="Mainslide1" class="Mainslide" data-slide="1" data-slideShow="start">
+		</div>
+		<div id="Mainslide2" class="Mainslide" data-slide="2" data-slideShow="next">
+		</div>
+		<div id="Mainslide3" class="Mainslide" data-slide="3">
+		</div>
+		<div id="Mainslide4" class="Mainslide" data-slide="4">
+		</div>
+	<th:block layout:fragment="css">
+		<link th:href="@{/css/slide.css?version=4}"  rel="stylesheet" type="text/css">
+	</th:block>
+	</div>
+</html>

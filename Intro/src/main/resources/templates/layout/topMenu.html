@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<div th:fragment="topMenu">
+	
+	<div class="commonColor" id="TitleMenuCover"> <!-- title -->
+			<img alt="" src="./img/Logo14.png" style="width : 20%; height : 50%;">
+	</div>
+	
+	<div id="MainMenuCover" >
+		<a class="MainMenuClass" id="MainMenu_Intro">
+			Intro
+		</a>
+		<a class="MainMenuClass" id="MainMenu_Carrer" href="#Carrer">
+			career
+		</a>
+		<a class="MainMenuClass" id="MainMenu_Project" href="#Project">
+			Project
+		</a>
+		<a class="MainMenuClass" id="MainMenu_Etc" href="#Etc">
+			Etc
+		</a>
+		
+		<a class="MainMenuClass" id="MainMenu_Contact" href="#Intro">
+			Contact
+		</a>
+		
+	</div>
+
+		<th:block layout:fragment="css">
+			<style>
+				#TitleMenuCover{
+					width: 15%;
+				    height: 100%;
+				    cursor: pointer;
+				    font-size: 4vh;
+/* 				    font-family: 'Open Sans', sans-serif; */
+				    font-family: 'Raleway', sans-serif;
+				    float: left;
+				    margin: 0 0 0 5%;
+				}
+				#MainMenuCover{
+					width: 45%;
+				    height: 100%;
+				    float: left;
+				    font-size: 2vh;
+				    font-family: 'Open Sans', sans-serif;
+				    font-weight: 300;
+				    display: table;
+				    margin: 0 10%;
+				    text-decoration: none;
+				}
+				
+				.MainMenuClass{
+					height : 100%;
+					width : 20%;
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+					cursor: pointer;
+				}
+				
+				.icon-class{
+					font-size : 2vh;
+				}
+				.MainMenuClass:hover{
+					transition : all .2s ease-in;
+					color : #641be1;
+				}
+				
+				#LoginMenu{
+					width : 6%;
+					float : right;	
+					margin : 1% 1% 0 0;
+				}
+				
+				#menu_bell,#menu_user{
+					margin : 0 15% 0 0;
+				}
+				
+				#menu_bell,#menu_login,#menu_user{
+				cursor: pointer;
+				}
+				
+				a{
+				text-decoration: none;
+				color: inherit;
+				}
+			</style>
+		</th:block>
+		<th:block layout:fragment="script">
+			<th:block th:fragment="script">
+				<script>
+				
+				</script>
+			</th:block>
+		</th:block>
+	</div>
+</html>

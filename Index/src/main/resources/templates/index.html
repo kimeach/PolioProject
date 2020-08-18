@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org" 
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:include="layout/headerSetting::head">
+</head>
+
+<body class="container-fluid">
+	<div th:include="layout/searchPopup::search" id="search" class="commonBgColor"></div> <!-- body layout -->
+	<div th:include="layout/topMenu::topMenu" id="topMenu" class="commonBgColor"></div> <!-- sidebar layout -->
+	<div th:include="layout/subMenu::subMenu" id="subMenu" class="commonBgColor"></div> <!-- sidebar layout -->
+	<div class="BaseCover">
+<!-- 		<div class="ImgCover"></div> -->
+		<div id="MainmenuCover">
+			<div id="ProfileCover" class="mainCover">
+				<div id="profileBackCover"></div>
+				<div id="profileBox">
+					<div id="profileImage"></div>
+					<div id="profileContentCover">
+						<div id="profile_name">Kim Ki Moon</div>
+						<div class="profile_common_sub">BackEnd Developer</div>
+						<br/>
+						<div class="profile_common">이메일 </div>
+						<div class="profile_common_sub"> kimeach@naver.com</div>
+						<br/>
+						<div class="profile_common">전화번호 </div>
+						<div class="profile_common_sub">010-7657-5746</div>
+						<br/>
+						<div class="profile_common">거주지 </div>
+						<div class="profile_common_sub">경기 화성시</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="IntroCover"  class="mainCover">
+			<div class="MainTitle" id="Intro">자기소개</div>
+				<br>
+				안녕하세요.
+				<br>
+				조직 내에서 경력을 쌓고 회사의 이익을 위해 조직적이고 목표 지향적 인 기술을 제공 할 수있는 직책을 찾고 있습니다.
+				<br>
+				주 언어는 Java 이며 Spring 을 기반으로 웹 개발을 하며
+				<br>
+				Spring 이외에 Sql, BootStrap,Jquery 등 서버 이외에 언어도 병행하며 개발을 하고있습니다.
+			</div>
+			<div id="CareerCover"  class="mainCover">
+			<div class="MainTitle" id="Carrer">경력사항</div>
+			<br>
+				<table class="table" id="carrerTable">
+				
+					<tr>
+						
+						<td>2020-08 ~ 2021 - 02</td>
+						<td>웹에서 DID 장비 및 키오스크 장비 제어 프로젝트 참여 (외주) </td>
+					</tr>
+					<tr>
+						<td>2020-03 ~ 2021 - 02</td>
+						<td>삼성 반도체 파견 (CTC 유지보수 및 개발 프로젝트 참여)</td>
+					</tr>
+					<tr>
+						<td>2019-08 ~ 2020 - 03</td>
+						<td>품질 관리 시스템(QMS) 프로젝트 진행</td>
+					</tr>
+					<tr>
+						<td>2019-08</td>
+						<td>엔셀(주) 입사</td>
+					</tr>
+					<tr>
+						<td>2018-12 ~ 2019-06</td>
+						<td>국비지원 학원 수료</td>
+					</tr>
+					<tr>
+						<td>2019-04 ~ 2019-06</td>
+						<td>부동산 프로젝트 진행</td>
+					</tr>
+					<tr>
+						<td>2019-02 ~ 2019-04</td>
+						<td>쇼핑몰 프로젝트 진행</td>
+					</tr>
+					<tr>
+						<td>2018-02 ~ 2018-09</td>
+						<td>OpenCV 를 이용한 얼굴 인식 카메라 개발</td>
+					</tr>
+				</table>
+			</div>
+			<div id="ProjectCover" class="mainCover">
+				<div class="MainTitle" id="Project">프로젝트</div>
+				<div th:include="slide::Slide" id="slide"></div>
+			</div>
+			
+			<div id="EtcCover" class="mainCover">
+				<div class="MainTitle" id="Etc">기타 이력사항</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<th:block layout:fragment="css">
+		<link th:href="@{/css/profile.css?version=10}"  rel="stylesheet" type="text/css">
+		<style>
+		.ImgCover{
+			width : 100%;
+			height : 40vh;
+			background-image: url(./img/backImg.jpg);
+		    background-position: center;
+		    background-size: 100% 100%;
+		}
+		
+		.mainCover{
+			width : 100%;
+			height : 100vh;
+		}
+		
+		#ProfileCover{
+		background-image: url(./img/backImg2.jpg);
+		    background-position: center;
+		    background-size: 100% 100%;
+		}
+		#profileImage{
+			width : 50%;
+			height : 100%;
+			background-image: url(./img/myProfile2.jpg);
+		    background-position: center;
+		    background-size: 100% 100%;
+		    float : left;
+		}
+		
+		#IntroCover{
+		text-align :center;
+		font-size : 5vh;
+		font-family: 'Nanum Pen Script', cursive;
+		height : 50vh;
+		background-color: rgb(241,241,241);
+		color: #182153;
+		}
+		
+		#CareerCover{
+		}
+		#ProjectCover{
+		    background-color: rgb(241,241,241);
+		}
+		#EtcCover{
+		    background-color: white;
+		}
+		#profileBackCover{
+			width: 100%;
+		    height: 100%;
+		    background-color: rgba(0,0,0,0.5);
+		    position: absolute;
+		    z-index: 100;
+		}
+		#profileBox{
+			width :70%;
+			height : 70%;
+			margin: 0 15%;
+    		background-color: rgba(255,255,255,0.9);
+    		z-index: 105;
+			position: absolute;
+    		top: 18%;
+		}
+		#profileContentCover{
+			float : left;
+			width : 50%;
+			height : 80%;
+			font-family: 'Raleway', sans-serif;
+			padding: 5% 0 0 5%;
+		}
+		
+		#profile_name{
+			font-size : 5vh;
+			font-family: 'Roboto', sans-serif;
+		}
+		
+		#profile_job{
+		
+		}
+		
+		.profile_common{
+			font-size: 4vh;
+			font-family: 'Roboto', sans-serif;
+		}
+		
+		.profile_common_sub{
+			font-size : 3vh;
+			font-family: 'Roboto', sans-serif;
+		}
+		#carrerTable{
+			width : 60%;
+			margin : 0 20%;
+		}
+		.MainTitle{
+		font-size : 5vh;
+		font-family: 'Nanum Pen Script', cursive;
+		text-align: left;
+		height : 10%;
+		}
+		</style>
+	
+	</th:block>
+	
+	<th:block layout:fragment="script">
+	 <th:block th:include="layout/headerSetting::script"></th:block>
+		<script type="text/javascript" th:inline="javascript">
+			
+		$(function(){
+			});	
+		</script>
+	</th:block>
+	</body>
+</html>
